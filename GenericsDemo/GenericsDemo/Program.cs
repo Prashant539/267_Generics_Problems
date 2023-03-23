@@ -6,8 +6,9 @@ namespace GenericsDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Please choose program from below options");
-            Console.WriteLine("1:Integer Delete ArrayElement and also by Generic class \n2:Double Delete Element and by also Generic class");
+            Console.WriteLine("1:Integer Delete ArrayElement and also by Generic class \n2:Double Delete Element and by also Generic class\n3:Generic Method");
             int option = Convert.ToInt32(Console.ReadLine());
+            int[] intarr = { 30, 23, 45, 56 };
             switch(option)
             {
                 case 1:
@@ -43,6 +44,17 @@ namespace GenericsDemo
                    // DeleteArrayElement.DoubleDeleteElement(doublearr, doubledelete);
                     GenericClass<double> genericClass1 = new GenericClass<double>(doublearr, doubledelete);
                     genericClass1.DeleteElement();
+                    break;
+                case 3:
+                    Console.WriteLine("Plese enter element one by one");
+                    for (int i = 0; i < intarr.Length; i++)
+                    {
+                        intarr[i] = Convert.ToInt32(Console.ReadLine());
+
+                    }
+                    Console.WriteLine("\nPlase pickup any one element from this array");
+                    int result = Convert.ToInt32(Console.ReadLine());
+                    GenericMethod.DeleteElement<int>(intarr, result);
                     break;
           
             }
