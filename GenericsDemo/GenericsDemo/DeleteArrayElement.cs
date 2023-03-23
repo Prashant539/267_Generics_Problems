@@ -9,6 +9,7 @@ namespace GenericsDemo
     public class DeleteArrayElement
     {
         public static void DeleteElement(int[] arr, int delete)
+        
         {
             int k = 0;
             int[] result = new int[arr.Length - 1];
@@ -20,7 +21,24 @@ namespace GenericsDemo
                     k++;
                 }
             }
-            foreach(var j in result)
+            foreach(int j in result)
+            {
+                Console.WriteLine(j + " ");
+            }
+        }
+        public static void DoubleDeleteElement(double[] doublearr, double delete)
+        {
+            int k = 0;
+            double[] result = new double[doublearr.Length - 1];
+            for (int i = 0; i < doublearr.Length; i++)
+            {
+                if (delete != doublearr[i])
+                {
+                    result[k] = doublearr[i];
+                    k++;
+                }
+            }
+            foreach (double j in result)
             {
                 Console.WriteLine(j + " ");
             }
