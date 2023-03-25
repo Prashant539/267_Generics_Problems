@@ -10,7 +10,8 @@ namespace GenericsDemo
                              "\n2:Double Delete Element and by also Generic class" +
                              "\n3:Generic Method" +
                              "\n4:Charcter Delete Element and also by using Generic class and Generic Method" +
-                             "\n5:Minimum Interger");
+                             "\n5:Minimum Interger" +
+                             "\n6:Minimum float");
 
 
             int option = Convert.ToInt32(Console.ReadLine());
@@ -81,6 +82,9 @@ namespace GenericsDemo
                     break;
                 case 5:
                     MinInteger.CheckMinInteger();
+                    break;
+                case 6:
+                    MinimumFloat.CheckMinFloat();
                     break;
 
             }
