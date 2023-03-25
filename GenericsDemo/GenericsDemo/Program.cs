@@ -6,7 +6,10 @@ namespace GenericsDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Please choose program from below options");
-            Console.WriteLine("1:Integer Delete ArrayElement and also by Generic class \n2:Double Delete Element and by also Generic class\n3:Generic Method");
+            Console.WriteLine("1:Integer Delete ArrayElement and also by Generic class " +
+                             "\n2:Double Delete Element and by also Generic class" +
+                             "\n3:Generic Method" +
+                             "\n4:Charcter Delete Element and also by using Generic class and Generic Method");
             int option = Convert.ToInt32(Console.ReadLine());
             int[] intarr = { 30, 23, 45, 56 };
             switch(option)
@@ -56,7 +59,24 @@ namespace GenericsDemo
                     int result = Convert.ToInt32(Console.ReadLine());
                     GenericMethod.DeleteElement<int>(intarr, result);
                     break;
-          
+                case 4:
+                    Console.WriteLine("How many character to add into array ");
+                    int gsize =Convert.ToInt32(Console.ReadLine());
+                    char[] chararr = new char[gsize];
+                    Console.WriteLine("Plese enter element one by one");
+                    for (int i = 0; i < gsize; i++)
+                    {
+                        chararr[i] = Convert.ToChar(Console.ReadLine());
+
+                    }
+                    Console.WriteLine("\nPlase pickup any one element from this array");
+                    char chardelete = Convert.ToChar(Console.ReadLine());
+                    DeleteArrayElement.CharDeleteElement(chararr, chardelete);
+                    //GenericClass<char> genericClass2 = new GenericClass<char>(chararr, chardelete);
+                    //genericClass2.DeleteElement();
+                   // GenericMethod.DeleteElement<char>(chararr, chardelete);
+                    break;
+
             }
 
         }
