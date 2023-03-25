@@ -9,7 +9,10 @@ namespace GenericsDemo
             Console.WriteLine("1:Integer Delete ArrayElement and also by Generic class " +
                              "\n2:Double Delete Element and by also Generic class" +
                              "\n3:Generic Method" +
-                             "\n4:Charcter Delete Element and also by using Generic class and Generic Method");
+                             "\n4:Charcter Delete Element and also by using Generic class and Generic Method" +
+                             "\n5:Minimum Interger");
+
+
             int option = Convert.ToInt32(Console.ReadLine());
             int[] intarr = { 30, 23, 45, 56 };
             switch(option)
@@ -75,6 +78,9 @@ namespace GenericsDemo
                     //GenericClass<char> genericClass2 = new GenericClass<char>(chararr, chardelete);
                     //genericClass2.DeleteElement();
                    // GenericMethod.DeleteElement<char>(chararr, chardelete);
+                    break;
+                case 5:
+                    MinInteger.CheckMinInteger();
                     break;
 
             }
